@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulário de Cadastro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <!-- TÍTULO -->
+        <div class="container-fluid" style="padding-bottom: 30px;">
+            <div class="text-center">
+                <h1>Ficha Cadastral</h1>
+            </div>
+        </div>
+
+        <!-- CABEÇALHO -->
+        <section id="cabecalho">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="col-md-3">
+                        <p>Ficha entregue:</p>
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control"/>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <p>Ficha aprovada:</p>
+                        <div class='input-group date' id='datetimepicker2'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="container-fluid" style="padding-top: 30px;">
+
+                <!-- TIPO PESSOA -->
+                <section id="pessoa" style="padding-top: 20px;"> 
+                    <h3>Dados do Imóvel</h3><hr> 
+                    <div class="row" style="padding-top: 20px;">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label class="control-label">Imóvel Pretendido:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label class="control-label">Valor do Aluguel:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="control-label">Tipo:</label>
+                            <select class="form-control">
+                                <option>Comercial</option>
+                                <option>Residencial</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label class="control-label">Vigência:</label>
+                                <input type="text" class="form-control text-left" placeholder="Meses" maxlength="3">
+                            </div>
+                        </div>
+
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <label class="control-label">Vencimento:</label>
+                                <select class="form-control">
+                                    <option>05</option>
+                                    <option>10</option>
+                                    <option>15</option>
+                                    <option>20</option>
+                                    <option>25</option>
+                                    <option>30</option>
+                                </select>
+                            </div>
+                        </div>                      
+                    </div>
+                </section>
+
+                <form id="formCadastro" method="post" class="horizontal-form" action="" name="formCadastro" enctype="multipart/form-data">
+                    <div class="form-body">
+                                <!-- DADOS PESSOAIS -->
+                        <h3>Dados Pessoais</h3><hr>
+                        <div class="row">    
+                            <div style="padding-bottom: 50px;">
+                                <div class="col-md-6 text-center">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"><strong>Pessoal Jurídica</strong>
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"><strong>Pessoa Física</strong>
+                                    </label>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"><strong>Locatário</strong>
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"><strong>Fiador</strong>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                                 
+                        <div class="row">    
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Nome completo:</label>
+                                    <input type="text" class="form-control">    
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label">CNPJ/CPF:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label">Telefone:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">Celular:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label class="control-label">Email:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>                          
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label">RG:</label>
+                                    <input type="text" class="form-control" maxlength="9">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">Orgão Emissor:</label>
+                                    <input type="text" class="form-control" placeholder="SSPDF">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label class="control-label">Data de Nascimento:</label>    
+                                <div class='input-group date' id='datetimepicker3'>
+                                    <input type='text' class="form-control"/>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div> 
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">Estado Civil:</label>
+                                    <select class="form-control">
+                                        <option>Solteiro (a)</option>
+                                        <option>Casado (a)</option>
+                                        <option>Divorciado (a)</option>   
+                                        <option>Separado (a)</option>
+                                        <option>Viuvo (a)</option>
+                                        <option>Companheiro (a)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label">Nacionalidade:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>                          
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label">Naturalidade:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        
+                                 <!-- ENDEREÇO -->
+                        <h3>Endereço</h3><hr>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">CEP:</label>
+                                    <input type="text" class="form-control" maxlength="8">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Endereço:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-group" >
+                                    <label class="control-label">UF:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label">Cidade:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label">Bairro:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label class="control-label">Complemento:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        
+                                    <!-- DADOS TRABALHO -->
+                        <h3>Trabalho</h3><hr>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">Cargo/Profissão:</label>
+                                    <input type="text" class="form-control" maxlength="15" placeholder="Gerente Geral">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">Renda Mensal Líquida:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>  
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">Outros Rendimentos:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div> 
+                        </div>
+                        
+
+                        <h3>Dados Cônjuge</h3><hr>
+                         <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label class="control-label">Nome Completo:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label">CPF:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>  
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">RG:</label>
+                                    <input type="text" class="form-control" maxlength="9">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">Orgão Emissor:</label>
+                                    <input type="text" class="form-control" placeholder="SSPDF">
+                                </div>
+                            </div>
+                         </div><hr>
+                    </div>
+                </form>        
+            </div>
+        </div>
+
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
+
